@@ -30,7 +30,7 @@
       (anzu :priority 95)
       auto-compile
       ,second-left
-      (major-mode :priority 79)
+      (major-mode :priority 95)
       (process :when active)
       ((flycheck-error flycheck-warning flycheck-info)
        :when active
@@ -43,23 +43,22 @@
       (version-control :when active
                        :priority 78)
       (org-pomodoro :when active)
-      (org-clock :when active)
-      nyan-cat)
+      (org-clock :when active))
     `(which-function
       (python-pyvenv :fallback python-pyenv)
-      (purpose :priority 94)
+      (purpose :priority 75)
       (battery :when active)
       (selection-info :priority 95)
       input-method
       ((buffer-encoding-abbrev
-        point-position
-        line-column)
+        point-position)
        :separator " | "
-       :priority 96)
+       :priority 75)
       (so-long :when active)
       (global :when active)
       ,@additional-segments
-      (buffer-position :priority 99)
+      (buffer-position :priority 79)
+      (line-column :priority 96)
       (hud :priority 99)))
 
   (setq-default mode-line-format '("%e" (:eval (spaceline-ml-main)))))
