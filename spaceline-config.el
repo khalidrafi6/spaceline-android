@@ -29,7 +29,9 @@
     `(,left
       (anzu :priority 95)
       auto-compile
+      (buffer-modified buffer-size :priority 85)
       ,second-left
+      (remote-host :priority 75)
       (major-mode :priority 95)
       (process :when active)
       ((flycheck-error flycheck-warning flycheck-info)
@@ -49,7 +51,7 @@
       (purpose :priority 75)
       (battery :when active)
       (selection-info :priority 95)
-      input-method
+      (input-method :priority 98)
       ((buffer-encoding-abbrev
         point-position)
        :separator " | "
@@ -76,8 +78,7 @@ ADDITIONAL-SEGMENTS are inserted on the right, between `global' and
            :fallback evil-state
            :face highlight-face
            :priority 100)
-         '((buffer-modified buffer-size buffer-id remote-host)
-           :priority 98)
+         '(buffer-id :priority 98)
          additional-segments))
 
 ;;;###autoload
