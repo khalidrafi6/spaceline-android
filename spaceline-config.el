@@ -52,14 +52,14 @@
       (battery :when active)
       (selection-info :priority 95)
       (input-method :priority 98)
-      ((buffer-encoding-abbrev
+      ((buffer-position
         point-position)
        :separator " | "
        :priority 75)
       (so-long :when active)
       (global :when active)
       ,@additional-segments
-      (buffer-position :priority 79)
+      (buffer-encoding-abbrev :priority 79)
       (line-column :priority 96)
       (hud :priority 99)))
 
