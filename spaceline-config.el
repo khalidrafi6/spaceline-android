@@ -43,7 +43,7 @@
       (mu4e-alert-segment :when active)
       (erc-track :when active)
       (version-control :when active
-                       :priority 78)
+                       :priority 79)
       (org-pomodoro :when active)
       (org-clock :when active))
     `(which-function
@@ -59,7 +59,7 @@
       (so-long :when active)
       (global :when active)
       ,@additional-segments
-      (buffer-encoding-abbrev :priority 79)
+      (buffer-encoding-abbrev :priority 78)
       (line-column :priority 96)
       (hud :priority 99)))
 
