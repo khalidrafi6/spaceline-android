@@ -29,7 +29,8 @@
     `(,left
       (anzu :priority 95)
       auto-compile
-      (buffer-modified buffer-size :priority 85)
+      ((buffer-modified buffer-size)
+       :priority 85)
       ,second-left
       (remote-host :priority 75)
       (major-mode :priority 95)
