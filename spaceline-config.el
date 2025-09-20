@@ -27,7 +27,7 @@
   "Convenience function for the spacemacs and emacs themes."
   (spaceline-compile
     `(,left
-      (anzu :priority 95)
+      (anzu :priority 100)
       auto-compile
       ((buffer-modified buffer-size)
        :priority 85)
