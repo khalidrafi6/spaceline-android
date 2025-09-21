@@ -29,7 +29,7 @@
     `(,left
       (anzu :priority 100)
       auto-compile
-      ((buffer-modified buffer-size)
+      (buffer-modified
        :priority 85)
       ,second-left
       (remote-host :priority 75)
@@ -61,6 +61,7 @@
       (global :when active)
       ,@additional-segments
       (buffer-encoding-abbrev :priority 78)
+      (buffer-size :priority 80)
       (line-column :priority 96)
       (hud :priority 99)))
 
