@@ -58,17 +58,17 @@
                                      "\nmouse-3: Toggle minor mode")
                   'local-map (let ((map (make-sparse-keymap)))
                                (define-key map
-                                 [mode-line mouse-1]
-                                 (powerline-mouse 'minor 'menu lighter))
+                                           [mode-line mouse-1]
+                                           (powerline-mouse 'minor 'menu lighter))
                                (define-key map
-                                 [mode-line mouse-2]
-                                 (powerline-mouse 'minor 'help lighter))
+                                           [mode-line mouse-2]
+                                           (powerline-mouse 'minor 'help lighter))
                                (define-key map
-                                 [mode-line mouse-3]
-                                 (powerline-mouse 'minor 'menu lighter))
+                                           [mode-line mouse-3]
+                                           (powerline-mouse 'minor 'menu lighter))
                                (define-key map
-                                 [header-line down-mouse-3]
-                                 (powerline-mouse 'minor 'menu lighter))
+                                           [header-line down-mouse-3]
+                                           (powerline-mouse 'minor 'menu lighter))
                                map)))))
            minor-mode-alist))
   :separator spaceline-minor-modes-separator)
@@ -83,7 +83,7 @@
       (format "%d" total-lines)
     (powerline-buffer-size)))
 
-(defcustom spaceline-buffer-id-max-length 45
+(defcustom spaceline-buffer-id-max-length 20
   "The maximum displayed length of the buffer-id segment."
   :type 'integer
   :group 'spaceline)
@@ -164,9 +164,9 @@
 (spaceline-define-segment column
   "The current column number."
   (if (and
-        (boundp 'column-number-indicator-zero-based)
-        (not column-number-indicator-zero-based))
-    "%2C"
+       (boundp 'column-number-indicator-zero-based)
+       (not column-number-indicator-zero-based))
+      "%2C"
     "%2c"))
 
 (defun spaceline--docview-page-number ()
