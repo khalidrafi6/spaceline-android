@@ -39,7 +39,7 @@
        :when active
        :priority 89)
       (minor-modes :when active
-                   :priority 9)
+                   :priority 88)
       (treesit-inspect :when active)
       (mu4e-alert-segment :when active)
       (erc-track :when active)
@@ -53,16 +53,16 @@
       (battery :when active)
       (selection-info :priority 95)
       (input-method :priority 98)
-      ((buffer-position
-        point-position)
-       :separator " | "
-       :priority 75)
       (so-long :when active)
       (global :when active)
       ,@additional-segments
       (buffer-encoding-abbrev :priority 78)
       (buffer-size :priority 80)
       (line-column :priority 96)
+      ((buffer-position
+        point-position)
+       :separator " | "
+       :priority 75)
       (hud :priority 99)))
 
   (setq-default mode-line-format '("%e" (:eval (spaceline-ml-main)))))
